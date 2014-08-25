@@ -15,8 +15,8 @@
 		var msg = ""; 
 		var da = new Date();
 		var min = da.getTime() - daold;
-		if(min > 5000){
-			msg = "----中断了5S----";
+		if(min > 2000){
+			msg = "----中断了"+min+"S----";
 		}
 		daold = da.getTime();
 		var s = da.getMinutes()+"min"+da.getSeconds()+"s"+msg+"  ";
