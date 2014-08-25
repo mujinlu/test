@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test inteval</title>
+</head>
+<body>
+<div id = "text">
+	
+</div>
+</body>
+<script type="text/javascript">
+	var x= 0,daold;
+	var item = document.getElementById("text");
+	function showdate(){
+		var msg = ""; 
+		var da = new Date();
+		var min = da.getTime() - daold;
+		if(min > 5000){
+			msg = "----中断了5S----";
+		}
+		daold = da.getTime();
+		var s = da.getMinutes()+"min"+da.getSeconds()+"s"+msg+"  ";
+		var o = document.createElement("span"); 
+		o.innerHTML = s;
+		item.appendChild(o);
+	}
+	setInterval(showdate,1000);
+</script>
+</html>
